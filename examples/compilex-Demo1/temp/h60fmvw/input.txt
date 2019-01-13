@@ -1,0 +1,3 @@
+function (data){
+                res.send(data);
+            }

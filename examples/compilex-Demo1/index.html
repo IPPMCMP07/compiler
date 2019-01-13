@@ -1,0 +1,36 @@
+
+<html>
+<head>
+	<title>HiDE</title>
+</head>
+<style>
+h1{text-align: center;size:20px;text-decoration:none;color: white;font-style:oblique;}
+h3{text-align: center;size:20px;text-decoration:none;color: white;font-style:oblique;}
+body{background-color: skyblue;padding: 10px;font-family: serif:color:monospace;}</style>
+<body>
+<center>
+<h1>HiDE COMPILER</h1>
+<form id="myform" name="myform" method="post" action="compileit">
+<h3>Code</h3>
+<textarea rows="13" cols="100" id="code" name="code" ></textarea>
+<br/>
+<h3>Input</h3>
+<textarea rows="10" cols="100" id="input" name="input" ></textarea>
+<br/>
+Language : <select name="lang">
+  <option value="C">C</option>
+  <option value="C++">C++</option>
+  <option value="Java">Java</option>
+  <option value="Python">Python</option>
+  <option value="CS">C#</option>
+  <option value="VB">VB</option>
+</select>
+Compile With Input :
+<input type="radio" name="inputRadio" id="inputRadio" value="true"/>yes
+<input type="radio" name="inputRadio" id="inputRadio" value="false"/>No
+<br />
+<input type="submit" value="submit"  name="submit" />
+</form>
+</center>
+</body>
+</html>

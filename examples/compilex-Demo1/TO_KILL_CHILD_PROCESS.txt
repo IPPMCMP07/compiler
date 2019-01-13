@@ -1,0 +1,3 @@
+netstat -ano | find ":port "
+tasklist /fi "pid eq processid"
+taskkill /pid processid /f
