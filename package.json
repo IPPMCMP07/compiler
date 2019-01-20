@@ -4,8 +4,12 @@
   "description": "compilex is a node.js library which is used to build online code editor/compiler websites and webservices.",
   "main": "compilex.js",
   "dependencies": {
+    "colors": "~0.6.2",
     "cuid": "~1.2.4",
-    "colors": "~0.6.2"
+    "express": "^4.16.4",
+    "react": "^16.7.0",
+    "rethinkdb": "^2.3.3",
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {},
   "scripts": {

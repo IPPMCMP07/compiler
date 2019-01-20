@@ -47,11 +47,12 @@ app.post('/compileit' , function (req , res ) {
 	   	var envData = { OS : "windows" , cmd : "g++"};
         	compiler.compileCPP(envData , code , function (data) {
         	if(data.error)
-        	{
+        	{console.log(data.output+'hi friends');
         		res.send(data.error);
         	}
         	else
         	{
+				console.log(data.output);
         		res.send(data.output);
         	}
 
@@ -141,6 +142,6 @@ app.get('/fullStat' , function(req , res ){
     });
 });
 
-app.listen(5000,function(){
-//console.log(process.pid);
+app.listen(3000,'0.0.0.0',function(){
+console.log('listening to port '+ 5000);
 });

@@ -1,3 +1,8 @@
+#TO kill child process
+
 netstat -ano | find ":port "
 tasklist /fi "pid eq processid"
 taskkill /pid processid /f
+#why use 0.0.0.0:port for lan accessing
+
+https://stackoverflow.com/questions/30712141/connect-to-localhost3000-from-another-computer-expressjs-nodejs
