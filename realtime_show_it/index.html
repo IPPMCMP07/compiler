@@ -1,17 +1,112 @@
 <html>
 
-<head><title>HiDE CHAT</title></head>
+<head><title>HiDE CHAT</title>
+
+
+<style>
+body {
+  background-color: #A9A9A9;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-left:5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px;background: #C0C0C0;color:white; padding: 12px 20px; margin:1px; font-size:16px;font-family: Arial, Helvetica, sans-serif;}
+      #messages li:nth-child(odd) { background: #4CAF50; }
+	  textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input[type=text], select {
+ 
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input[id=m], select {
+ 
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+</style>
+
+
+</head>
 <body>
-<ul id="messages"></ul>
-<form action="">
-<input type="text" name ="name" id="name">your name</input>
-<input id="m" autocomplete="off" /><button>sent</button>
-</form>
+<center>
+<ul id="messages"></ul></center>
+
+<center><div id="chat"><form action="">
+
+Your Name:<input type="text" name ="name" id="name" width="20%"></input>
+Message:<input id="m" autocomplete="off" width="80%" placeholder="Write message....."/><button class="button">HIT ME</button>
+
+
+</form></div></center>
+<div>
+<center><textarea id="area" placeholder="Write your code...." rows="30" cols="100"></textarea></center>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="path/to/vanilla.js"></script>
+ 
+<script>var socket = io();</script>
 <script>
+
+$(document).ready(function(){
+ 
+  
+  $("textarea").keyup(function(){
+   socket.emit('code',$("textarea").val());
+   //socket.emit('temp',"hello");
+   socket.on('code',function(code){
+   $("textarea").val(code);
+  
+  });
+  });
+  
+});
+
+</script>
+
+<script>
+
 $(function(){
- var socket = io();
+ 
  $('form').submit(function(e){
  e.preventDefault();
  socket.emit('chat message',$('#name').val()+':'+$('#m').val());

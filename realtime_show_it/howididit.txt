@@ -3,10 +3,6 @@ https://medium.com/@ethanryan/making-a-simple-real-time-collaboration-app-with-r
 ###using socket.io
 
 https://medium.com/front-end-weekly/build-a-collaborative-rich-text-editor-with-node-js-and-socket-io-38ee25b6e315
-##this has chat and video feature both
-https://code4startup.com/projects/create-a-collaborative-code-platform-with-real-time-video-call-with-nodejs
-##using rethinkdb
-https://www.pluralsight.com/guides/building-a-realtime-collaborative-editor-with-rethinkdb
 ###socket.io
 https://socket.io/docs/ 
 

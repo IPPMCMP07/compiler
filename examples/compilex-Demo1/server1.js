@@ -1,6 +1,7 @@
-var express = require('express');
+var app = require('express')();
 var path = require('path');
-var app = express();
+var http = require('http').Server(app);
+var io= require('socket.io')(http);
 var process=require('process')
 //const kill = require('kill-port')
 var bodyParser = require('body-parser');
@@ -14,8 +15,28 @@ console.log(process.pid);
 
 app.get('/' , function (req , res ) {
 
-	res.sendfile( __dirname + "/index.html");
+	res.sendFile( __dirname + '/index.html',function(data){
+		console.log("html file sent to server");
+	});
 
+});
+io.on('connection',function(socket){
+	
+	console.log('a new connection id: '+socket.id);
+	
+	/*/socket.on('chat message',function(data){
+		//console.log(data);
+		//io.emit('chat message', data);
+		//});*/
+		socket.on('code',function(code){
+			console.log(code);
+			io.emit('code',code);
+			
+		});
+		
+	socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
 });
 
 
@@ -141,6 +162,7 @@ app.get('/fullStat' , function(req , res ){
         res.send(data);
     });
 });
+
 
 app.listen(3000,'0.0.0.0',function(){
 console.log('listening to port '+ 5000);
