@@ -16,7 +16,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/prashantRmishra/realtime_show_it.git"
+    "url": "git+https://github.com/prashantRmishra/project.git"
   },
   "keywords": [
     "node.js",
@@ -25,7 +25,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/prashantRmishra/realtime_show_it.git/issues"
+    "url": "https://github.com/prashantRmishra/project.git/issues"
   },
-  "homepage": "https://github.com/prashantRmishra/realtime_show_it.git#readme"
+  "homepage": "https://github.com/prashantRmishra/project.git#readme"
 }
