@@ -41,6 +41,7 @@ io.on('connection',function(socket){
 
 
 app.post('/compileit' , function (req , res ) {
+	
 
 	var code = req.body.code;
 	var input = req.body.input;
@@ -165,5 +166,5 @@ app.get('/fullStat' , function(req , res ){
 
 
 app.listen(3000,'0.0.0.0',function(){
-console.log('listening to port '+ 5000);
+console.log('listening to port '+ 3000);
 });

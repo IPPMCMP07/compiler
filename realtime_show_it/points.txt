@@ -1,0 +1,34 @@
+Slide Notes
+
+1:
+
+Hello everyone, we are team "King in the Comps" from Terna Engineering College, Maharashtra.
+We are presenting our solution to the problem proposed by amadeus titled as "Using AR/VR to transform Travel Experience"
+
+2:
+
+We will cover following points:
+1. Some of the problems faced by customers or organizations in the hospitality sector and our solution to those problems.
+2. How our solution is unique than existing solutions and what are their benefits
+3. How our solution will be materialized using a scalable architecture.
+4. The Business model
+
+T : 30
+
+3:
+
+Look and feel of food and beverages (F&B), Food wastage, hotel rooms, sustained long-term trust of customers
+
+7:
+
+1. It is predicted that the AR/VR market alone will grow as large as $100 billion by 2025
+this virtual technology is so much impressive that the trend-setting tech giants is investing so heavily in this fast evolving technology
+2.Leveraging oppurtunities to deeply connect with visitors and travellers
+3.Enhancing physical environments while broadcasting hotel and rooms
+Customer experience builds trust and we are achieving this with Virtual room
+4.24x7 availability of transparent information
+5.Improving Visibility
+6.Upsell (User based customizations, suggestions)
+7.Promotion (In business model, dsicount coupons, happy hours etc.)
+8.By providing virtual games customers can be kept busy while waiting (10% of them)
+9.Customers can also be kept busy while waiting by using a business tactic wherein hotel branded virtual toys can be hided throughout the premises of hotel and if customer finds them they will earn points through which discount coupons can be redeemed
